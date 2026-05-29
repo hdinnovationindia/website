@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "#FFFFFF"
     ];
 
-    const TOTAL_DRONES = 35;
+    const TOTAL_DRONES = 80;
 
     function random(min, max) {
         return Math.random() * (max - min) + min;

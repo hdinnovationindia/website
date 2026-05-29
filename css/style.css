@@ -55,6 +55,44 @@ body{
     background-attachment:fixed;
 }
 
+img,
+picture,
+video,
+iframe{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+a{
+    overflow-wrap:break-word;
+    word-wrap:break-word;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+.hero-content,
+.about-container,
+.gallery-grid,
+.video-grid,
+.service-grid,
+.formation-grid,
+.stats,
+.footer-grid{
+    width:min(100%,1200px);
+    margin-inline:auto;
+}
+
 /* =========================================
    ANIMATED BACKGROUND
 ========================================= */
@@ -345,6 +383,7 @@ body::before{
 
     z-index:10;
 
+    width:min(100%,980px);
     max-width:980px;
 
     padding:40px 40px 35px;
@@ -1559,18 +1598,20 @@ footer p{
 .drone-fly{
 
     position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    width:6px;
-    height:6px;
+    font-size:1rem;
+    line-height:1;
 
-    border-radius:50%;
+    color:var(--bg1);
+    text-shadow:
+    0 0 10px currentColor,
+    0 0 18px currentColor,
+    0 0 28px currentColor;
 
-    background:currentColor;
-
-    box-shadow:
-    0 0 6px currentColor,
-    0 0 12px currentColor,
-    0 0 18px currentColor;
+    pointer-events:none;
 }
 
 @keyframes fly{
@@ -1634,6 +1675,59 @@ footer p{
 }
 
 @media(max-width:768px){
+
+    .navbar{
+        padding:16px 5%;
+    }
+
+    .hero{
+        min-height:auto;
+        padding-top:120px;
+    }
+
+    .hero-content{
+        width:calc(100% - 40px);
+        padding:28px 20px 30px;
+    }
+
+    .hero-content h1{
+        font-size:2.8rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        gap:14px;
+    }
+
+    .page-header{
+        padding-top:120px;
+        padding-bottom:60px;
+    }
+
+    .page-header h1,
+    .services h2,
+    .gallery-preview h2,
+    .contact-home h2,
+    .map-section h2,
+    .social-section h2,
+    .showcase-section h2,
+    .mission-section h2,
+    .formations-section h2,
+    .process-section h2{
+        font-size:2.4rem;
+    }
+
+    .footer-grid{
+        gap:24px;
+    }
+
+    .footer-bottom{
+        font-size:0.95rem;
+    }
 
     .menu-toggle{
 
