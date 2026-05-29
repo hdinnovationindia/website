@@ -13,9 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+
 </head>
 
 <body>
+    <div id="drone-sky"></div>
 
     <!-- NAVBAR -->
 
@@ -275,6 +277,7 @@
     </footer>
 
     <script>(function(){document.addEventListener('DOMContentLoaded',function(){var t=document.getElementById('menu-toggle');var n=document.getElementById('nav-links');if(!t||!n)return;t.addEventListener('click',function(){var o=n.classList.toggle('active');t.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(n.classList.contains('active')){n.classList.remove('active');t.classList.remove('open');t.setAttribute('aria-expanded','false');}});});window.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('active')){n.classList.remove('active');t.classList.remove('open');t.setAttribute('aria-expanded','false');}});});})();</script>
+    <script src="js/script.js"></script>
 
 </body>
 

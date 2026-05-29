@@ -861,14 +861,31 @@ footer p{
 
 .page-header{
 
-    padding-top:180px;
-    padding-bottom:100px;
+    padding-top:160px;
+    padding-bottom:80px;
 
     text-align:center;
 
     background:rgba(3,11,31,.45);
 
     border-bottom:1px solid var(--border);
+}
+
+.page-header-content{
+
+    max-width:900px;
+
+    margin-inline:auto;
+
+    padding:40px 32px;
+
+    background:var(--card);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:28px;
+
+    backdrop-filter:blur(20px);
 }
 
 .page-header h1{
@@ -913,11 +930,24 @@ footer p{
     align-items:center;
 }
 
+.about-image{
+
+    width:100%;
+}
+
 .about-image img{
 
     width:100%;
 
     border-radius:25px;
+    object-fit:cover;
+}
+
+.about-content{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
 .about-content h2{
@@ -1333,9 +1363,26 @@ footer p{
     .contact-section,
     .map-section,
     .social-section,
-    .footer-grid{
+    .footer-grid,
+    .about-section,
+    .services,
+    .gallery-preview,
+    .video-section,
+    .showcase-section,
+    .mission-section,
+    .formations-section,
+    .process-section,
+    .contact-home{
         padding-left:6%;
         padding-right:6%;
+    }
+
+    .about-container{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
     }
 
     .contact-container{
@@ -1354,6 +1401,30 @@ footer p{
 
     .map-container iframe{
         min-height:280px;
+    }
+
+    .page-header{
+        padding-top:120px;
+        padding-bottom:60px;
+    }
+
+    .page-header-content{
+        padding:32px 24px;
+    }
+
+    .page-header h1{
+        font-size:2.8rem;
+    }
+
+    .page-header p,
+    .about-content p,
+    .services h2,
+    .mission-section p,
+    .contact-home h2,
+    .video-section h2,
+    .social-section h2,
+    .showcase-section h2{
+        font-size:1.05rem;
     }
 }
 
