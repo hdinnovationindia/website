@@ -397,24 +397,32 @@ body::before{
 
     margin-bottom:22px;
 
+    color:transparent;
+
     background:linear-gradient(90deg, var(--cyan), var(--blue), var(--pink));
 
-    background-size:300%;
+    background-size:200% auto;
+
+    background-position:0% 50%;
 
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 
-    animation:glowText 7s linear infinite;
+    animation:glowText 12s ease-in-out infinite;
 }
 
 @keyframes glowText{
 
     0%{
-        background-position:0%;
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
     }
 
     100%{
-        background-position:300%;
+        background-position:0% 50%;
     }
 }
 
@@ -715,6 +723,97 @@ footer img{
 footer p{
 
     color:#AEB8D0;
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    align-items:start;
+
+    margin-bottom:35px;
+}
+
+.footer-section h3{
+
+    color:var(--white);
+
+    margin-bottom:18px;
+
+    font-size:1.15rem;
+}
+
+.footer-links{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+}
+
+.footer-links li{
+
+    margin-bottom:12px;
+}
+
+.footer-links a{
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    transition:.25s;
+}
+
+.footer-links a:hover{
+
+    color:var(--cyan);
+}
+
+.footer-social{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.footer-social a{
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    transition:.25s;
+}
+
+.footer-social a:hover{
+
+    color:var(--cyan);
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.07);
+
+    padding-top:24px;
+
+    text-align:center;
+}
+
+.footer-logo img{
+
+    width:90px;
+
+    height:auto;
+
+    margin-bottom:20px;
 }
 
 /* =========================================
@@ -1161,14 +1260,86 @@ footer p{
 .contact-info,
 .contact-form{
 
-    background:
-    rgba(255,255,255,.05);
+    background:rgba(255,255,255,.05);
 
     backdrop-filter:blur(20px);
 
     padding:40px;
 
     border-radius:25px;
+}
+
+.map-container{
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.map-container iframe{
+
+    width:100%;
+
+    min-height:360px;
+
+    height:100%;
+
+    border:0;
+}
+
+@media (max-width: 992px) {
+
+    .contact-section,
+    .map-section,
+    .social-section,
+    .footer-grid{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .contact-info,
+    .contact-form{
+        padding:28px;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        font-size:1rem;
+    }
+
+    .map-container iframe{
+        min-height:280px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-content{
+        padding:28px 24px 30px;
+    }
+
+    .hero-content h1{
+        font-size:3rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        gap:16px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-section{
+        padding-bottom:20px;
+    }
 }
 
 .contact-info h2,
@@ -1436,65 +1607,6 @@ footer p{
         opacity:0;
     }
 }
-
-/* =========================================
-   MOBILE
-========================================= */
-
-/* @media(max-width:768px){
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero-content h1{
-        font-size:2.6rem;
-    }
-
-    .hero-content p{
-        font-size:1rem;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-    }
-
-    .services h2,
-    .gallery-preview h2,
-    .contact-home h2{
-        font-size:2rem;
-    }
-
-    .logo img{
-        height:60px;
-    }
-} */
-
-/* @media(max-width:768px){
-
-    .navbar{
-
-        padding:15px 20px;
-    }
-
-    .nav-links{
-
-        gap:12px;
-
-        font-size:14px;
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-    }
-
-    .logo img{
-
-        width:60px;
-        height:60px;
-    }
-
-} */
 
 .hero-content.home-hero{
     background:transparent;
