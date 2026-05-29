@@ -1,60 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Gallery | HDII Drone Shows</title>
-
+        <title>Gallery | HDII Drone Shows</title>
     <link rel="stylesheet" href="css/style.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
-
-    <!-- NAVBAR -->
-
     <header>
-
         <nav class="navbar">
-
             <a href="index.html" class="logo">
-
                 <img src="images/logo.png" alt="HDII Logo">
-
             </a>
-
-            <ul class="nav-links">
+            <div class="menu-toggle" id="menu-toggle" aria-expanded="false">☰</div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shows.html">Shows</a></li>
                 <li><a href="gallery.html" class="active">Gallery</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-
         </nav>
-
     </header>
-
     <!-- PAGE HEADER -->
-
     <section class="page-header">
-
         <div class="page-header-content">
-
             <h1>Drone Show Gallery</h1>
-
             <p>
                 Explore Our Spectacular Drone Formations & Events
             </p>
-
         </div>
-
     </section>
 
     <!-- PHOTO GALLERY -->
@@ -229,9 +207,8 @@
             All Rights Reserved.
 
         </p>
-
     </footer>
 
+    <script>(function(){document.addEventListener('DOMContentLoaded',function(){var t=document.getElementById('menu-toggle');var n=document.getElementById('nav-links');if(!t||!n)return;t.addEventListener('click',function(){var o=n.classList.toggle('active');t.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(n.classList.contains('active')){n.classList.remove('active');t.classList.remove('open');t.setAttribute('aria-expanded','false');}});});window.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('active')){n.classList.remove('active');t.classList.remove('open');t.setAttribute('aria-expanded','false');}});});})();</script>
 </body>
-
 </html>

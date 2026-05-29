@@ -718,39 +718,6 @@ footer p{
 }
 
 /* =========================================
-   MOBILE
-========================================= */
-
-@media(max-width:768px){
-
-    .nav-links{
-        display:none;
-    }
-
-    .hero-content h1{
-        font-size:2.6rem;
-    }
-
-    .hero-content p{
-        font-size:1rem;
-    }
-
-    .hero-buttons{
-        flex-direction:column;
-    }
-
-    .services h2,
-    .gallery-preview h2,
-    .contact-home h2{
-        font-size:2rem;
-    }
-
-    .logo img{
-        height:60px;
-    }
-}
-
-/* =========================================
    PAGE HEADER
 ========================================= */
 
@@ -862,23 +829,6 @@ footer p{
     color:var(--text);
 
     line-height:1.8;
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media(max-width:768px){
-
-    .about-container{
-
-        grid-template-columns:1fr;
-    }
-
-    .page-header h1{
-
-        font-size:2.5rem;
-    }
 }
 
 /* =========================================
@@ -1415,23 +1365,6 @@ footer p{
 }
 
 /* =========================================
-   MOBILE
-========================================= */
-
-@media(max-width:768px){
-
-    .contact-container{
-
-        grid-template-columns:1fr;
-    }
-
-    .social-links{
-
-        flex-direction:column;
-    }
-}
-
-/* =========================================
    DRONE SKY ANIMATION
 ========================================= */
 
@@ -1504,3 +1437,149 @@ footer p{
     }
 }
 
+/* =========================================
+   MOBILE
+========================================= */
+
+/* @media(max-width:768px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero-content h1{
+        font-size:2.6rem;
+    }
+
+    .hero-content p{
+        font-size:1rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .services h2,
+    .gallery-preview h2,
+    .contact-home h2{
+        font-size:2rem;
+    }
+
+    .logo img{
+        height:60px;
+    }
+} */
+
+/* @media(max-width:768px){
+
+    .navbar{
+
+        padding:15px 20px;
+    }
+
+    .nav-links{
+
+        gap:12px;
+
+        font-size:14px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .logo img{
+
+        width:60px;
+        height:60px;
+    }
+
+} */
+
+.hero-content.home-hero{
+    background:transparent;
+    border:none;
+    box-shadow:none;
+    padding:0;
+    margin-top:-40px;
+}
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:32px;
+
+    color:white;
+
+    cursor:pointer;
+
+    z-index:10001;
+}
+
+@media(max-width:768px){
+
+    .menu-toggle{
+
+        display:block;
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:80px;
+
+        right:-100%;
+
+        width:260px;
+
+        height:auto;
+
+        background:
+        rgba(8,17,32,.95);
+
+        backdrop-filter:blur(20px);
+
+        flex-direction:column;
+
+        padding:25px;
+
+        gap:20px;
+
+        border-radius:20px;
+
+        transition:.4s;
+
+        z-index:9999;
+    }
+
+    .nav-links.active{
+
+        right:20px;
+    }
+
+    .nav-links li{
+
+        width:100%;
+    }
+
+    .nav-links a{
+
+        display:block;
+
+        padding:12px;
+
+        border-radius:10px;
+    }
+
+    .nav-links a:hover{
+
+        background:
+        rgba(255,255,255,.08);
+    }
+}

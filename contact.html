@@ -29,7 +29,9 @@
 
             </a>
 
-            <ul class="nav-links">
+            <div class="menu-toggle" id="menu-toggle" aria-expanded="false">☰</div>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shows.html">Shows</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -241,6 +243,8 @@
         </p>
 
     </footer>
+
+    <script>(function(){document.addEventListener('DOMContentLoaded',function(){var t=document.getElementById('menu-toggle');var n=document.getElementById('nav-links');if(!t||!n)return;t.addEventListener('click',function(){var o=n.classList.toggle('active');t.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){if(n.classList.contains('active')){n.classList.remove('active');t.classList.remove('open');t.setAttribute('aria-expanded','false');}});});window.addEventListener('keydown',function(e){if(e.key==='Escape'&&n.classList.contains('active')){n.classList.remove('active');t.classList.remove('open');t.setAttribute('aria-expanded','false');}});});})();</script>
 
 </body>
 

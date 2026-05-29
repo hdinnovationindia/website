@@ -1,5 +1,4 @@
 const droneContainer = document.getElementById("drone-sky");
-
 const droneColors = [
     "#00E5FF",
     "#A020F0",
@@ -10,49 +9,32 @@ const droneColors = [
     "#FF6B35",
     "#FFFFFF"
 ];
-
 const TOTAL_DRONES = 50;
-
 function random(min, max) {
     return Math.random() * (max - min) + min;
 }
-
 function createDrone() {
-
     const drone = document.createElement("div");
-
     drone.classList.add("drone-fly");
-
     drone.innerHTML = "✦";
-
     droneContainer.appendChild(drone);
-
     animateDrone(drone);
 }
-
 function animateDrone(drone) {
-
     const startX = random(0, window.innerWidth);
     const startY = random(0, window.innerHeight);
-
     const moveX = random(-400, 400);
     const moveY = random(-300, 300);
-
     const duration = random(10, 25);
-
     drone.style.left = startX + "px";
     drone.style.top = startY + "px";
-
     drone.style.color =
         droneColors[
             Math.floor(Math.random() * droneColors.length)
         ];
-
     drone.style.fontSize =
         random(4, 10) + "px";
-
     drone.style.opacity = "0";
-
     drone.animate(
         [
             {
@@ -78,15 +60,10 @@ function animateDrone(drone) {
             easing: "linear"
         }
     );
-
     setTimeout(() => {
-
         animateDrone(drone);
-
     }, (duration + 3) * 1000);
 }
-
 for(let i = 0; i < TOTAL_DRONES; i++){
-
     createDrone();
 }
