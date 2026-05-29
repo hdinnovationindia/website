@@ -349,8 +349,7 @@ body::before{
 
     padding:40px 40px 35px;
 
-    background:rgba(7, 31, 100, 0.05);
-
+    background:rgba(255, 255, 255, 0.05);
     border:1px solid rgba(255,255,255,0.15);
 
     border-radius:32px;
