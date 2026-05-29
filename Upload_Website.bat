@@ -1,16 +1,15 @@
 @echo off
-title HDII Website Upload
-
-echo ============================
-echo HDII Website GitHub Upload
-echo ============================
+title HDII Website Force Upload
 
 cd /d "%~dp0"
+
+echo ============================
+echo FORCE UPLOAD TO GITHUB
+echo ============================
 
 git init
 
 git remote remove origin 2>nul
-
 git remote add origin https://github.com/hdinnovationindia/website.git
 
 git add .
@@ -21,6 +20,8 @@ git commit -m "%msg%"
 
 git branch -M main
 
-git push -u origin main
+git push -f origin main
 
+echo.
+echo Upload Complete!
 pause
