@@ -912,7 +912,7 @@ footer p{
 
     display:flex;
 
-    align-items:left;
+    align-items:center;
 
     gap:14px;
 
@@ -1096,7 +1096,7 @@ footer p{
     }
 
     .footer-links-grid{
-        justify-items:start;
+        justify-content:center;
     }
 
     .footer-section.footer-follow .footer-social-buttons{
