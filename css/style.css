@@ -593,12 +593,22 @@ body::before{
     padding:30px 3%;
 }
 
+.service-grid2{
+
+    display:grid;
+
+    /* Fixed 3 columns: three items per row */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap:30px;
+}
+
 .service-grid{
 
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
+    repeat(auto-fit,minmax(200px,1fr));
 
     gap:30px;
 }
@@ -615,7 +625,7 @@ body::before{
 
     border-radius:25px;
 
-    padding:35px;
+    padding:15px;
 
     transition:.4s;
 }
@@ -1166,7 +1176,7 @@ footer p{
 
 .about-section{
 
-    padding:80px 8%;
+    padding:30px 5%;
 }
 
 .about-container{
@@ -1177,7 +1187,7 @@ footer p{
 
     gap:50px;
 
-    align-items:center;
+    align-items:flex-start;
 }
 
 .about-image{
@@ -1224,7 +1234,7 @@ footer p{
 
 .mission-section{
 
-    padding:80px 8%;
+    padding:30px 5%;
 
     text-align:center;
 }
@@ -1255,14 +1265,14 @@ footer p{
 
 .formations-section{
 
-    padding:90px 8%;
+    padding:20px 5%;
 }
 
 .formations-section h2{
 
     text-align:center;
 
-    margin-bottom:60px;
+    margin-bottom:30px;
 
     font-size:3rem;
 
@@ -1313,7 +1323,7 @@ footer p{
 
     width:100%;
 
-    height:250px;
+    height:300px;
 
     object-fit:cover;
 }
@@ -1333,14 +1343,14 @@ footer p{
 
 .process-section{
 
-    padding:90px 8%;
+    padding:20px 4%;
 }
 
 .process-section h2{
 
     text-align:center;
 
-    margin-bottom:60px;
+    margin-bottom:30px;
 
     font-size:3rem;
 
@@ -1360,14 +1370,14 @@ footer p{
 
 .gallery-section{
 
-    padding:90px 8%;
+    padding:30px 5%;
 }
 
 .gallery-section h2{
 
     text-align:center;
 
-    margin-bottom:60px;
+    margin-bottom:30px;
 
     font-size:3rem;
 
@@ -1386,7 +1396,7 @@ footer p{
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
+    repeat(auto-fit,minmax(350px,1fr));
 
     gap:25px;
 }
@@ -1425,14 +1435,14 @@ footer p{
 
 .video-section{
 
-    padding:90px 8%;
+    padding:30px 8%;
 }
 
 .video-section h2{
 
     text-align:center;
 
-    margin-bottom:60px;
+    margin-bottom:30px;
 
     font-size:3rem;
 
@@ -1490,14 +1500,14 @@ footer p{
 
 .showcase-section{
 
-    padding:90px 8%;
+    padding:30px 8%;
 }
 
 .showcase-section h2{
 
     text-align:center;
 
-    margin-bottom:60px;
+    margin-bottom:30px;
 
     font-size:3rem;
 
@@ -1516,7 +1526,7 @@ footer p{
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
+    repeat(auto-fit,minmax(350px,1fr));
 
     gap:30px;
 }
@@ -1717,9 +1727,40 @@ footer p{
 
 .info-box h3{
 
+    display:flex;
+    align-items:center;
+    gap:12px;
+
     color:var(--blue);
 
     margin-bottom:10px;
+}
+
+.info-box h3 .info-icon{
+
+    width:28px;
+    height:auto;
+    display:inline-block;
+}
+
+.whatsapp-button .btn-icon{
+
+    width:28px;
+    height:auto;
+    display:inline-block;
+}
+
+.whatsapp-button img{
+
+    width:20px;
+    height:auto;
+    margin-right:10px;
+}
+
+.whatsapp-float-icon{
+
+    width:28px;
+    height:auto;
 }
 
 .info-box p{
@@ -1875,7 +1916,7 @@ footer p{
 
     border-radius:50%;
 
-    background:#25D366;
+    /* background:#25D366; */
 
     display:flex;
 
