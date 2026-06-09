@@ -644,7 +644,7 @@ body::before{
 .card h3{
 
     color:var(--blue);
-
+    
     margin-bottom:15px;
 }
 
@@ -758,9 +758,9 @@ footer{
 
     background:rgba(8,17,32,.92);
 
-    padding:12px 0px 12px;
+    padding:12px 15px 12px 15px;
 
-    text-align:center;
+    text-align:left;
 
     margin-top:2px;
 }
@@ -801,7 +801,7 @@ footer p{
 .footer-section h3{
 
     color:var(--white);
-
+    text-align: center;
     margin-bottom:18px;
 
     font-size:1rem;
@@ -963,6 +963,8 @@ footer p{
     grid-template-columns:0.5fr;
 
     gap:14px;
+    text-align: center;    
+    justify-content: space-around;
 }
 
 .footer-social a{
