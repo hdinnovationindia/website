@@ -1322,7 +1322,7 @@ footer p{
 }
 
 .formation-card img {
-    width: 70%;
+    width: 100%;
     max-width: 300px;
     height: 180px;
     object-fit: contain;
